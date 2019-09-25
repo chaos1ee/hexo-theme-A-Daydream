@@ -18,22 +18,14 @@
 
 ![preview](preview.png)
 
-<<<<<<< HEAD
 ### 🏠 [主页地址](https://github.com/chaos1ee/hexo-theme-A-Daydream#readme)
-=======
-### 🏠 [主页地址](https://github.com/maybeeee/hexo-theme-A-Daydream#readme)
->>>>>>> 22ee1c555132ffa48643b2f02d55db7c81fc5807
 
 ## 使用方式
 
 ### 下载主题
 
 ```sh
-<<<<<<< HEAD
 git clone https://github.com/chaos1ee/hexo-theme-A-Daydream themes/daydream
-=======
-git clone https://github.com/maybeeee/hexo-theme-A-Daydream themes/daydream
->>>>>>> 22ee1c555132ffa48643b2f02d55db7c81fc5807
 ```
 
 修改hexo博客根目录下的`_config.yml`文件，将theme改为daydream。
@@ -67,7 +59,6 @@ comment:
 
 ## Author
 
-<<<<<<< HEAD
 👤 **LiHao**
 
 * Github: [@chaos1ee](https://github.com/chaos1ee)
@@ -75,15 +66,6 @@ comment:
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/chaos1ee/hexo-theme-A-Daydream/issues).
-=======
-👤 **haoli**
-
-* Github: [@maybeeee](https://github.com/maybeeee)
-
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/maybeeee/hexo-theme-A-Daydream/issues).
->>>>>>> 22ee1c555132ffa48643b2f02d55db7c81fc5807
 
 ## Show your support
 
