@@ -1,0 +1,12 @@
+- var posts = site.posts.data
+- var foo = function() {}
+
+.tags
+  h1 #{page.title}
+  ul
+    each post, key in posts
+      li #{post.title}
+      
+  ul
+    each tag in site.tags.data
+      h2 !{tag.name}

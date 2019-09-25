@@ -1,0 +1,47 @@
+include icon.pug
+
+- var isHome = is_home();
+
+mixin article(article)
+ 
+  article.article
+    if article.header_image
+      img(src=url_for(article.header_image))
+    
+    .article-info
+      header.article-info__header
+        h1
+          if isHome
+            a(href=url_for(article.path)) #{article.title}
+          else
+            =article.title
+
+      .article-info__body
+        if isHome         
+          p.article-info__body-excerpt #{truncate(strip_html(article.content), {length: 200, omission: '...'})}
+        else
+          p.article-info__body-content !{article.content}
+
+        // tags
+        if article.tags &&  article.tags.length
+          ul.article-info__body-tag-list
+            each tag in article.tags.data
+              li.article-info__body-tag-list__item
+                a(href=url_for('/tags/' + tag.name) target="_self")
+                  span !{tag.name.toUpperCase()}
+      
+      if !article.footer_hidden
+        footer.article-info__footer
+          .article-info__footer-left
+            p.article-info__footer-date(href="javascript:void(0);")
+              +icon('calender')
+              span #{date(article.date, config.date_format)}
+          //- .article-info__footer-right
+          //-   a.article-info__footer-share(href="javascript:void(0);")
+          //-     +icon('share')
+          //-     span SHARE
+          //-   a.article-info__footer-comment(href="javascript:void(0);")
+          //-     +icon('comment')
+          //-     span #{article.comments.length}COMMENTS
+      .article-comment
+      include ../_partial/comment.pug

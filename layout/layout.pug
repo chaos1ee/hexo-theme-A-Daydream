@@ -1,0 +1,21 @@
+include _partial/head.pug
+body
+  main
+    include _partial/aside.pug
+    .content !{body}
+  
+  if theme.evanyou && theme.evanyou.enable
+    canvas#evanyou
+    script(src="/third-party/evan-you/evan-you.js")
+  
+  if theme.highlight.enable
+  // highlight
+  - var highlight_theme = theme.highlight.theme || 'default';
+    link(rel="stylesheet" href=url_for('/third-party/highlight/styles/' + highlight_theme + '.css'))
+    script(src=url_for('/third-party/highlight/highlight.pack.js'))
+    script.
+      document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
+      }); 

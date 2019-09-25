@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    - var re = /^(https):\/\/*/gi;
+    - var defaultImageURL = theme.cover_image_url;
+    - var imageURL = page.image || defaultImageURL;
+    - var url = config.url + "/archives/"
+
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, shrink-to-fit=no")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name="type", content="website")
+    meta(name="description", content=config.description)
+    meta(name="url", content=config.url)
+    meta(name="image" , content=defaultImageURL)
+    if re.test(imageURL)
+      meta(name="image:secure_url" , content=imageURL)
+
+    if page.title
+      meta(name="title", content=page.title)
+      title #{config.title + " | " + page.title}
+    else
+      meta(name="title", content=config.title)
+      title #{config.title} 
+
+    style.
+      #evanyou {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      .icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+      }
+    // customer styles
+    link(rel="stylesheet" href=url_for("css/main.css"))
+    // favicon
+    if theme.favicon
+      link(rel='icon' href=theme.favicon)  
+    // how to use the icons https://www.iconfont.cn/help/detail?spm=a313x.7781069.1998910419.d8d11a391&helptype=code
+    script(src=url_for("/third-party/iconfont/iconfont.js"))

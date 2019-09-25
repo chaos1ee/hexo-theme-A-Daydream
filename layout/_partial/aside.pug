@@ -1,0 +1,26 @@
+- var icons = ["github", "weibo", "wechat", "qq", "instgram", "twitter", "facebook", "email", "mobile"]
+
+include ../_mixin/icon.pug
+
+aside.aside
+  h1
+    a(href="/") #{theme.title}
+  p.description #{theme.description}
+  
+  nav
+    ul
+      each val, key in theme.menu
+        li
+          a(href=url_for(val)) !{__( key.toLowerCase())}
+
+  if theme.social_links
+    ul.social-link-list
+      each val, key in theme.social_links
+        li.social-link-list-item
+          a(href=val)
+            if icons.indexOf(key) > -1
+              +icon(key)
+            else 
+              +icon("social-default")
+
+  include footer.pug

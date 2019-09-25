@@ -1,0 +1,38 @@
+.archive {
+	@extend .card;
+	display: flex;
+	flex-flow: column;
+	min-height: 40vh;
+	padding: 4rem 4rem 8.5rem;
+
+	&-content {
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&-list {
+		width: 100%;
+		height: 100%;
+		align-self: flex-start;
+
+		&-item {
+			display: flex;
+			height: 3rem;
+			line-height: 3rem;
+			font-size: 1.2rem;
+
+			&__link {
+				flex: 1;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+
+			&__date {
+				font-size: 12px;
+			}
+		}
+	}
+}

@@ -1,0 +1,7 @@
+ul.post-list
+  each post, key in page.posts.data || []
+    li
+      include _mixin/article.pug
+      +article(post)
+
+include _widget/pagination.pug

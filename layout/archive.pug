@@ -1,0 +1,16 @@
+- var posts = site.posts.data;
+- var total = posts.length;
+
+.archive
+  header.archive-header
+    h3 一共有 <em>#{total}</em> 篇文章
+  .archive-content
+    if !total
+      .archive-no-post 您暂时还没有发表文章
+    else
+      ul.archive-list
+        each post in posts.sort(function(a, b) {return b.date - a.date})
+          li.archive-list-item
+            .archive-list-item__link(title=post.title)
+              a(href=url_for(post.path)) #{post.title}
+            span.archive-list-item__date #{date(post.date, config.date_format + ' ' + config.time_format)}

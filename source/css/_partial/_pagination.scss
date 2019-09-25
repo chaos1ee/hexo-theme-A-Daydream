@@ -1,0 +1,18 @@
+.pagination {
+	display: flex;
+	padding: 5rem 0 0;
+
+	&-prev,
+	&-next {
+		display: flex;
+		align-items: center;
+		color: #707070;
+		font-size: 1.2rem;
+		text-decoration: none;
+		border-bottom: none;
+
+		span {
+			padding: 0 0.4rem;
+		}
+	}
+}

@@ -1,0 +1,117 @@
+.article {
+	@extend .card;
+	margin-bottom: 4.5rem;
+
+	&-info {
+		padding: 5rem 5rem 0;
+
+		&__header {
+			padding-bottom: 3rem;
+			a {
+				border-bottom: none;
+				color: $primary-color;
+			}
+		}
+
+		&__body {
+			ol,
+			ul {
+				line-height: 2rem;
+			}
+
+			ol {
+				padding-left: 2rem;
+			}
+
+			ul {
+				list-style: inside;
+				padding-left: 1rem;
+			}
+
+			code:not(.hljs) {
+				background: #dedede;
+				border-radius: 2px;
+				padding: 2px 4px;
+				margin: 0 2px;
+			}
+
+			&-excerpt {
+				line-height: 2rem;
+			}
+
+			&-content {
+				line-height: 2rem;
+			}
+
+			&-tag-list {
+				display: flex;
+				flex-flow: wrap row;
+				align-items: center;
+				padding: 4.5rem 0;
+				line-height: 1rem !important;
+				list-style: none !important;
+				border-bottom: 1px solid $middle-color;
+
+				&__item {
+					margin-right: 10px;
+
+					a {
+						display: block;
+						padding: 6px 8px;
+						font-size: 12px;
+						border: 1px solid $light-color;
+						border-radius: 4px;
+						color: $light-color;
+
+						&:hover {
+							$darkenColor: darken(
+								$color: $light-color,
+								$amount: 20
+							);
+							border-color: $darkenColor;
+							color: $darkenColor;
+						}
+					}
+				}
+			}
+		}
+
+		&__footer {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 4.5rem 0;
+			height: 2rem;
+			line-height: 2rem;
+			color: $light-color;
+			font-size: 12px;
+
+			&-left,
+			&-right {
+				display: flex;
+				align-items: center;
+			}
+
+			&-right {
+				flex: 1;
+				flex-flow: row-reverse;
+			}
+
+			&-date,
+			&-comment,
+			&-share {
+				display: flex;
+				align-items: center;
+				border-bottom: none;
+			}
+
+			svg.icon {
+				margin-right: 0.3rem;
+			}
+
+			&-share {
+				margin-left: 1rem;
+			}
+		}
+	}
+}

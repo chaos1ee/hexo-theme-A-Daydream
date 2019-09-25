@@ -1,0 +1,13 @@
+
+include ../_mixin/icon.pug
+
+.pagination
+  if page.prev
+    a.pagination-prev(href=url_for(config.root + page.prev_link)) 
+      +icon('prev')
+      span !{__('prev')}
+  div(style="flex: 1;")
+  if page.next
+    a.pagination-next(href=url_for(config.root + page.next_link)) 
+      span !{__('next')}
+      +icon('next')

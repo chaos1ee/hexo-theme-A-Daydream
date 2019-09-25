@@ -1,0 +1,83 @@
+.aside {
+	flex: 0 300px;
+	padding: 0 80px 20px 0;
+	overflow: auto;
+
+	h1 {
+		width: 100%;
+
+		a {
+			display: inline-block;
+			border-bottom: 1px solid $light-color;
+			padding: 2rem 0;
+			color: $primary-color;
+		}
+	}
+
+	.description {
+		position: relative;
+		margin: 2rem 0;
+		padding-right: 5rem;
+		max-height: $description-lines * 2rem;
+		line-height: 2rem;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: $description-lines;
+		-webkit-box-orient: vertical;
+		color: $middle-color;
+	}
+
+	nav {
+		width: 100%;
+		overflow: hidden;
+
+		ul {
+			display: flex;
+			flex-flow: nowrap column;
+
+			li {
+				display: inline-block;
+
+				a {
+					display: inline-block;
+					height: 2rem;
+					line-height: 2rem;
+					border-bottom: none;
+				}
+
+				&:first-child a {
+					padding-top: 2rem;
+					border-top: 1px solid $light-color;
+				}
+
+				&:last-child a {
+					padding-bottom: 2rem;
+					border-bottom: 1px solid $light-color;
+				}
+			}
+		}
+	}
+
+	.social-link-list {
+		display: flex;
+		flex-flow: row;
+		padding: 2rem 0;
+
+		&-item {
+			margin-right: 5px;
+
+			a {
+				border-bottom: none;
+			}
+		}
+	}
+
+	footer {
+		font-size: 12px;
+
+		ul {
+			line-height: 1.5rem;
+		}
+	}
+}

@@ -1,0 +1,151 @@
+@import './reset';
+@import './var';
+@import '../fonts/source-code-pro/source-code-pro.css';
+
+html {
+	font-size: $root-font-size;
+	box-sizing: border-box;
+	font-family: Helvetica, “PingFangSC”, ‘Microsoft Yahei’, ‘微软雅黑’, Arial, sans-serif;
+}
+
+body {
+	font-size: $font-size;
+	background-color: $global-background-color;
+}
+
+table {
+	width: 100%;
+	line-height: 2rem;
+	margin: 2rem 0;
+	box-sizing: border-box;
+
+	tr {
+		border-bottom: 2px solid #dadada;
+	}
+
+	th {
+		background: #dadada;
+		&:last-child {
+			border-left: 2px solid #fff;
+		}
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	display: block;
+	margin-left: 0;
+	margin-right: 0;
+	line-height: 2em;
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 2rem;
+	margin-top: 0.67rem;
+	margin-bottom: 0.67rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 0.83rem;
+	margin-bottom: 0.83rem;
+}
+
+h3 {
+	font-size: 1.17rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+h4 {
+	font-size: 1rem;
+	margin-top: 1.33rem;
+	margin-bottom: 1.33rem;
+}
+
+h5 {
+	font-size: 0.83rem;
+	margin-top: 1.67rem;
+	margin-bottom: 1.67rem;
+}
+
+h6 {
+	font-size: 0.67rem;
+	margin-top: 2.33rem;
+	margin-bottom: 2.33rem;
+}
+
+p {
+	line-height: 2em;
+	margin: 1rem 0;
+}
+
+img {
+	width: 100%;
+	vertical-align: middle;
+}
+
+a {
+	color: $middle-color;
+	text-decoration: none;
+	border-bottom: 1px dotted $link-color;
+
+	&:hover {
+		color: darken($color: $middle-color, $amount: 20);
+	}
+}
+
+pre {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+
+	code {
+		span {
+			line-height: 1.8rem;
+		}
+	}
+}
+
+code {
+	font-family: 'Source Code Pro';
+
+	.hljs-keyword {
+		color: #7fff00;
+	}
+}
+
+main {
+	display: flex;
+	flex-flow: row;
+	justify-content: flex-start;
+	padding: 120px 15vw;
+	min-height: 100%;
+
+	@media screen and (min-width: 1600px) {
+		padding: 120px 20vw;
+	}
+}
+
+.content {
+	flex: 1;
+	overflow: hidden;
+}
+
+.card {
+	border-radius: 0.5rem;
+	overflow: hidden;
+	background-color: #fff;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+@import './_partial/about';
+@import './_partial/archive';
+@import './_partial/article';
+@import './_partial/aside';
+@import './_partial/pagination';
+@import './_partial/tags';
