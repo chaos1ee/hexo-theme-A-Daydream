@@ -4,7 +4,7 @@ body
     include _partial/aside.pug
     .content !{body}
   
-  if theme.evanyou && theme.evanyou.enable
+  if theme.evanyou
     canvas#evanyou
     script(src="/third-party/evan-you/evan-you.js")
   

@@ -3,7 +3,7 @@ title: Daydream
 subtitle:
 description: A gentleman should always mean what he says.
 keywords:
-author: haoli
+author: LiHao
 timezone:
 
 #menu
@@ -15,7 +15,7 @@ menu:
   about: /about
 
 social_links:
-  github: https://github.com/maybeeee
+  github: https://github.com/chaos1ee
   weibo: https://www.weibo.com/5347775908/profile
   # wechat:
   # qq:
@@ -58,5 +58,4 @@ comment:
   livere: MTAyMC80NjIyOC8yMjczOQ==
 
 # evanyou
-evanyou:
-  enable: false
+evanyou: true
